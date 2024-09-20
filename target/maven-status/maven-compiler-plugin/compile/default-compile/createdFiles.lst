@@ -1,0 +1,5 @@
+pl\imbestpumpkin\pumpkincolorfix\colorfix\Serializer\ItemStackSerializer.class
+pl\imbestpumpkin\pumpkincolorfix\colorfix\ListColorFix.class
+pl\imbestpumpkin\pumpkincolorfix\colorfix\Exception\ValueOfMapIsNotStringException.class
+pl\imbestpumpkin\pumpkincolorfix\colorfix\MapColorFix.class
+pl\imbestpumpkin\pumpkincolorfix\colorfix\StringColorFix.class
