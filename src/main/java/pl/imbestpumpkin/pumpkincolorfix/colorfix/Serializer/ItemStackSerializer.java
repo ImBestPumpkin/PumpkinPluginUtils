@@ -6,14 +6,16 @@ import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.*;
+import pl.imbestpumpkin.pumpkincolorfix.colorfix.GuiUtils.GuiItem;
 
 import java.util.*;
 
 import static pl.imbestpumpkin.pumpkincolorfix.colorfix.StringColorFix.colorOf;
 
 // This code is modified version of ItemStack Serializer from Spigot Forum
-
+@Deprecated()// Do not use not finished
 public class ItemStackSerializer {
+
     public static String serialize(ItemStack item) {
         StringBuilder builder = new StringBuilder();
         builder.append(item.getType().toString());
@@ -75,11 +77,11 @@ public class ItemStackSerializer {
             if (isNumber(args[0])) item.setAmount(Integer.parseInt(args[0]));
             if (args.length == 1) continue;
             if (args[0].equalsIgnoreCase("name")) {
-                setName(item, colorOf(args[1]));
+                setName(item, colorOf(args[1], true, true));
                 continue;
             }
             if (args[0].equalsIgnoreCase("displayName")) {
-                setDisplayName(item, colorOf(args[1]));
+                setDisplayName(item, colorOf(args[1], true, true));
                 continue;
             }
             if (args[0].equalsIgnoreCase("customModelData")) {
@@ -91,7 +93,7 @@ public class ItemStackSerializer {
                 continue;
             }
             if (args[0].equalsIgnoreCase("lore")) {
-                setLore(item, colorOf(args[1]));
+                setLore(item, colorOf(args[1], true, true));
                 continue;
             }
 
